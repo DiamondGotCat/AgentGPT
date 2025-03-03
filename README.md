@@ -9,6 +9,9 @@ GPT can Execute Your Custom Functions.
 
 **API:** OpenAI API (GPT)
 
+## Dependencies
+- `openai` from PyPI
+
 ## How
 
 I simply taught GPT how to use the Function.
