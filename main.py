@@ -113,7 +113,7 @@ All you have to do is say something like the following in your response:
 ---
 !AgentCode start  
 !runPython  
-!!runPython:script  
+!!runPython:content  
 result1 = len("Hello, World!")  
 !!  
 !!runPython:resultVar  
@@ -169,7 +169,7 @@ availableCommands = [
     {
         "id": "runPython",
         "args": [
-            "script",
+            "content",
             "resultVar"
         ],
         "desc": """
@@ -177,7 +177,7 @@ Execute Python Script.
 You should save the result in a variable of your choice within your script.
 
 Arguments:
-- script: Python Script
+- content: Python Script
 - resultVar: Variable Name of Saved Result Data
 
 Output:
