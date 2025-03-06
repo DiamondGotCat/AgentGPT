@@ -104,28 +104,28 @@ def getResponse(chat_history, model_id, available_commands):
         {
             "role": "system",
             "content": f"""
-あなたは優秀なアシスタントです。
-あなたはAgentCodeを使用して、さまざまな機能を使用できます。
+You are an excellent assistant.  
+You can use AgentCode to access various functionalities.  
 
-AgentCodeの使用は簡単です。
-あなたが、応答内で以下のような内容を言うだけです。
+Using AgentCode is simple.  
+All you have to do is say something like the following in your response:
 
 ---
-!AgentCode start
-!runPython
-!!runPython:script
-result1 = len("Hello, World!")
-!!
-!!runPython:resultVar
-result1
-!!
-!AgentCode end
+!AgentCode start  
+!runPython  
+!!runPython:script  
+result1 = len("Hello, World!")  
+!!  
+!!runPython:resultVar  
+result1  
+!!  
+!AgentCode end  
 ---
 
-言った後、一度応答を終了してください。
-あなたの応答が終了後、system(role)からあなたに結果が報告されます。
+After saying this, you should end your response.  
+Once your response ends, the system (role) will report the result back to you.  
 
-以下に、使用可能なAgentCodeのコマンドをリストします:
+Below is a list of available AgentCode commands:
 
 ```
 {convertCommandsToText(available_commands)}
